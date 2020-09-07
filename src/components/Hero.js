@@ -164,7 +164,7 @@ const Hero = () => {
               >
                 <i className="fab fa-github"></i>
               </motion.a>
-              <Link to="/contact">
+              <Link to={process.env.PUBLIC_URL + '/contact'}>
                 <motion.i
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}

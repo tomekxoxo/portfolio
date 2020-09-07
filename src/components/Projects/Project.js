@@ -229,7 +229,7 @@ const Project = props => {
         }
       })}
       <StyledButton>
-        <Link to="/projects" className="goBack">
+        <Link to={process.env.PUBLIC_URL + '/projects'}className="goBack">
           <i className="fas fa-chevron-circle-left"></i>Back To Projects
         </Link>
       </StyledButton>
