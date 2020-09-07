@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.js": "/portfolio/static/js/main.af0703d4.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.af0703d4.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.7703bed3.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.7703bed3.js.map",
+    "static/js/2.27aa9a12.chunk.js": "/portfolio/static/js/2.27aa9a12.chunk.js",
+    "static/js/2.27aa9a12.chunk.js.map": "/portfolio/static/js/2.27aa9a12.chunk.js.map",
+    "static/css/3.6135517b.chunk.css": "/portfolio/static/css/3.6135517b.chunk.css",
+    "static/js/3.04e8a852.chunk.js": "/portfolio/static/js/3.04e8a852.chunk.js",
+    "static/js/3.04e8a852.chunk.js.map": "/portfolio/static/js/3.04e8a852.chunk.js.map",
+    "static/js/4.0e1ce1f6.chunk.js": "/portfolio/static/js/4.0e1ce1f6.chunk.js",
+    "static/js/4.0e1ce1f6.chunk.js.map": "/portfolio/static/js/4.0e1ce1f6.chunk.js.map",
+    "static/js/5.ce5e55cc.chunk.js": "/portfolio/static/js/5.ce5e55cc.chunk.js",
+    "static/js/5.ce5e55cc.chunk.js.map": "/portfolio/static/js/5.ce5e55cc.chunk.js.map",
+    "static/js/6.8cfb1c2b.chunk.js": "/portfolio/static/js/6.8cfb1c2b.chunk.js",
+    "static/js/6.8cfb1c2b.chunk.js.map": "/portfolio/static/js/6.8cfb1c2b.chunk.js.map",
+    "static/js/7.7b753435.chunk.js": "/portfolio/static/js/7.7b753435.chunk.js",
+    "static/js/7.7b753435.chunk.js.map": "/portfolio/static/js/7.7b753435.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "precache-manifest.9abe3b99f4f3b88a0f1fa1d58497cec3.js": "/portfolio/precache-manifest.9abe3b99f4f3b88a0f1fa1d58497cec3.js",
+    "service-worker.js": "/portfolio/service-worker.js",
+    "static/css/3.6135517b.chunk.css.map": "/portfolio/static/css/3.6135517b.chunk.css.map",
+    "static/js/2.27aa9a12.chunk.js.LICENSE.txt": "/portfolio/static/js/2.27aa9a12.chunk.js.LICENSE.txt",
+    "static/media/TomaszKasprowicz.pdf": "/portfolio/static/media/TomaszKasprowicz.0e36579e.pdf",
+    "static/media/clock.jpg": "/portfolio/static/media/clock.7c9e21e3.jpg",
+    "static/media/memoCovered.jpg": "/portfolio/static/media/memoCovered.7c85f2c3.jpg",
+    "static/media/memoTouched.jpg": "/portfolio/static/media/memoTouched.9801bcd3.jpg",
+    "static/media/memoWin.jpg": "/portfolio/static/media/memoWin.b1d29c04.jpg",
+    "static/media/osteriaFront.jpg": "/portfolio/static/media/osteriaFront.733fa7ad.jpg",
+    "static/media/osteriaRecipes.jpg": "/portfolio/static/media/osteriaRecipes.3068adf8.jpg",
+    "static/media/osteriaResponsive.jpg": "/portfolio/static/media/osteriaResponsive.7b703abc.jpg",
+    "static/media/weatherAppFront.jpg": "/portfolio/static/media/weatherAppFront.c51d32ac.jpg",
+    "static/media/weatherAppModal.jpg": "/portfolio/static/media/weatherAppModal.9f6e83f8.jpg",
+    "static/media/weatherAppResponsive.jpg": "/portfolio/static/media/weatherAppResponsive.29a5f133.jpg",
+    "static/media/weatherIcon.jpg": "/portfolio/static/media/weatherIcon.2e960d49.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7703bed3.js",
+    "static/js/2.27aa9a12.chunk.js",
+    "static/js/main.af0703d4.chunk.js"
+  ]
+}
