@@ -16,6 +16,7 @@ const StyledHeader = styled.header`
   @media screen and (max-width: 768px) {
     & {
       background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(0,0,0,.9));
+      background: -webkit-linear-gradient(to top, rgba(255,0,0,0), rgba(0,0,0,.9));
     }
   }
 `;
