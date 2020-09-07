@@ -165,11 +165,11 @@ function App() {
       <Suspense fallback={<div>Loading...</div>}>
         <AnimatePresence>
           <Switch>
-            <Route path='/' exact component={Hero}/>
-            <Route path='/about'  component={AsyncAbout}/>
-            <Route path='/projects' exact component={AsyncProjects}/>
-            <Route path='/projects/:id'children={<AsyncProject/>}/>
-            <Route path='/contact' component={AsyncContact}/>
+            <Route path={process.env.PUBLIC_URL + '/'} exact component={Hero}/>
+            <Route path={process.env.PUBLIC_URL + '/about'}  component={AsyncAbout}/>
+            <Route path={process.env.PUBLIC_URL + '/projects'} exact component={AsyncProjects}/>
+            <Route path={process.env.PUBLIC_URL + '/projects/:id'} children={<AsyncProject/>}/>
+            <Route path={process.env.PUBLIC_URL + '/contact'} component={AsyncContact}/>
           </Switch>
           </AnimatePresence>
         </Suspense>

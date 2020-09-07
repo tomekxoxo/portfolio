@@ -61,7 +61,7 @@ const SideDrawer = (props) => {
               transition={{ delay: 0.3, type: "spring", stiffness: 100 }}
               variants={variants}
             >
-              <NavLink to="/about" onClick={props.close}>
+              <NavLink to={process.env.PUBLIC_URL + '/about'} onClick={props.close}>
                 About Me
               </NavLink>
             </motion.li>
@@ -70,7 +70,7 @@ const SideDrawer = (props) => {
               transition={{ delay: 0.4, type: "spring", stiffness: 100 }}
               variants={variants}
             >
-              <NavLink to="/projects" onClick={props.close}>
+              <NavLink to={process.env.PUBLIC_URL + '/projects'} onClick={props.close}>
                 Projects
               </NavLink>
             </motion.li>
@@ -79,7 +79,7 @@ const SideDrawer = (props) => {
               transition={{ delay: 0.5, type: "spring", stiffness: 100 }}
               variants={variants}
             >
-              <NavLink to="/contact" onClick={props.close}>
+              <NavLink to={process.env.PUBLIC_URL + '/contact'} onClick={props.close}>
                 Contact
               </NavLink>
             </motion.li>

@@ -113,7 +113,7 @@ const Header = () => {
           <span>
             <i className="fas fa-less-than"></i>
           </span>
-          <Link to="/">Kasprowicz</Link>
+          <Link to={process.env.PUBLIC_URL + '/'}>Kasprowicz</Link>
           <span>
             <i className="fas fa-greater-than"></i>
           </span>
@@ -122,19 +122,14 @@ const Header = () => {
             <ToggleButton isOpen={sideDrawer} open={toggleSideDrawerHandler}/>
             <SideDrawer close={toggleSideDrawerHandler} isOpen={sideDrawer}/>
           <ul>
-            {/* <li>
-              <a href="#" className="active">
-                Start
-              </a>
-            </li> */}
             <li>
-              <NavLink to="/about">About Me</NavLink>
+              <NavLink to={process.env.PUBLIC_URL + '/about'}>About Me</NavLink>
             </li>
             <li>
-              <NavLink to="/projects">Projects</NavLink>
+              <NavLink to={process.env.PUBLIC_URL + '/projects'}>Projects</NavLink>
             </li>
             <li>
-              <NavLink to="/contact">Contact</NavLink>
+              <NavLink to={process.env.PUBLIC_URL + '/contact'}>Contact</NavLink>
             </li>
           </ul>
         </NavItems>
