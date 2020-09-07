@@ -147,7 +147,7 @@ const Hero = () => {
                     .typeString("Hello!")
                     .pauseFor(1500)
                     .deleteAll()
-                    .typeString("I'am Front-End <br> Developer")
+                    .typeString("I am Front-End <br> Developer")
                     .start();
                 }}
               />
