@@ -4,6 +4,8 @@ import { Route, Switch } from "react-router-dom";
 import Particles from "react-particles-js";
 import Header from './components/Header/Header';
 import Hero from './components/Hero'
+import { AnimatePresence} from 'framer-motion';
+
 
 const AsyncProject = React.lazy(() => import('./components/Projects/Project'));
 const AsyncAbout = React.lazy(() => import('./components/AboutMe'));
@@ -161,13 +163,15 @@ function App() {
       />
       <Header />
       <Suspense fallback={<div>Loading...</div>}>
-      <Switch>
-        <Route path='/' exact component={Hero}/>
-        <Route path='/about'  component={AsyncAbout}/>
-        <Route path='/projects' exact component={AsyncProjects}/>
-        <Route path='/projects/:id'children={<AsyncProject/>}/>
-        <Route path='/contact' component={AsyncContact}/>
-        </Switch>
+        <AnimatePresence>
+          <Switch>
+            <Route path='/' exact component={Hero}/>
+            <Route path='/about'  component={AsyncAbout}/>
+            <Route path='/projects' exact component={AsyncProjects}/>
+            <Route path='/projects/:id'children={<AsyncProject/>}/>
+            <Route path='/contact' component={AsyncContact}/>
+          </Switch>
+          </AnimatePresence>
         </Suspense>
       </React.Fragment>
   );

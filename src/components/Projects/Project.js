@@ -2,8 +2,8 @@ import React, {useState} from "react";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { Redirect, withRouter} from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { motion } from "framer-motion";
 import SwiperCore, { Navigation, Pagination} from 'swiper';
 import Clock from '../../assets/images/clock.jpg';
 import MemoOne from '../../assets/images/memoCovered.jpg';
@@ -17,7 +17,7 @@ import OsteriaTwo from "../../assets/images/osteriaRecipes.jpg";
 import OsteriaThree from "../../assets/images/osteriaResponsive.jpg";
 import './swiper.css';
 
-const Container = styled.div`
+const Container = styled(motion.div)`
   width: 100%;
   max-width: 140rem;
   margin: 0 auto;
@@ -155,7 +155,7 @@ const Project = props => {
       projectName: "Restaurant App",
       tech: ["HTML5", "SCSS", "JavaScript"],
       description:
-        "Restaurant Simple page.",
+        "Simple Restaurant page.",
       live: "https://tomekxoxo.github.io/osteria/",
       github: "https://github.com/tomekxoxo/osteria",
     },
@@ -169,7 +169,11 @@ const Project = props => {
   }); 
 
   return (
-    <Container>
+    <Container
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3 }}
+        exit={{ opacity: 0 }}>
       <SectionTitle>
         <i className="fas fa-dollar-sign"></i>&#123;{project.projectName}&#125;
       </SectionTitle>
@@ -235,4 +239,4 @@ const Project = props => {
 };
 
 
-export default withRouter(Project);
+export default Project;

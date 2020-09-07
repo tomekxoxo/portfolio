@@ -5,6 +5,7 @@ import Clock from "../../assets/images/clock.jpg";
 import Memo from "../../assets/images/memoCovered.jpg";
 import WeatherIcon from "../../assets/images/weatherIcon.jpg";
 import OsteriaFront from "../../assets/images/osteriaFront.jpg";
+import { motion } from "framer-motion";
 
 const Container = styled.div`
   width: 100%;
@@ -35,37 +36,36 @@ const GridContainer = styled.div`
   grid-gap: 2rem;
 `;
 
-const GridItem = styled.div`
+const GridItem = styled(motion.div)`
   height: 35rem;
   background-image: url(${(props) => props.img});
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   transition: all 0.4s ease;
-  position:relative;
+  position: relative;
   &:last-of-type {
     margin-bottom: 2rem;
   }
-  &:hover{
+  &:hover {
     transform: translateY(-1rem);
-    
   }
-  
-  a{
-    div{
-    text-decoration:none;
-    width:100%;
-    height:100%;
-    transition: all 0.4s ease;
 
-    &:hover{
-      /* background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(0,0,0,.5)); */
-      background-color:rgba(0,0,0,.3);
+  a {
+    div {
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+      transition: all 0.4s ease;
+
+      &:hover {
+        /* background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(0,0,0,.5)); */
+        background-color: rgba(0, 0, 0, 0.3);
+      }
     }
-    
-  }
   }
 `;
+
 
 const Projects = (props) => {
   return (
@@ -74,17 +74,35 @@ const Projects = (props) => {
         <i className="fas fa-dollar-sign"></i>&#123;Projects&#125;
       </SectionTitle>
       <GridContainer>
-        <GridItem img={Clock}>
-        <Link to={`${props.match.url}/1`}><div></div></Link>
+        <GridItem img={Clock} initial={{ scale: 0 }} animate={{ scale: 1 }}>
+          <Link to={`${props.match.url}/1`}>
+            <div></div>
+          </Link>
         </GridItem>
-        <GridItem img={Memo}>
-          <Link to={`${props.match.url}/2`}><div></div></Link>
+        <GridItem img={Memo} initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{delay:0.1}}>
+          <Link to={`${props.match.url}/2`}>
+            <div></div>
+          </Link>
         </GridItem>
-        <GridItem img={WeatherIcon}>
-          <Link to={`${props.match.url}/3`}><div></div></Link>
+        <GridItem
+          img={WeatherIcon}
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{delay:0.2}}
+        >
+          <Link to={`${props.match.url}/3`}>
+            <div></div>
+          </Link>
         </GridItem>
-        <GridItem img={OsteriaFront}>
-          <Link to={`${props.match.url}/4`}><div></div></Link>
+        <GridItem
+          img={OsteriaFront}
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{delay:0.3}}
+        >
+          <Link to={`${props.match.url}/4`}>
+            <div></div>
+          </Link>
         </GridItem>
       </GridContainer>
     </Container>

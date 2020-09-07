@@ -70,7 +70,7 @@ const ContainerCenter = styled(Container)`
     a {
       text-align: center;
       position: relative;
-      padding-right:3rem;
+      padding-right: 3rem;
     }
     a:hover::before {
       top: -5rem;
@@ -153,26 +153,48 @@ const Hero = () => {
               />
             </h1>
             <div className="social">
-              <a
+              <motion.a
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.2 }}
+                exit={{ opacity: 0 }}
                 href="https://github.com/tomekxoxo"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <i className="fab fa-github"></i>
-              </a>
+              </motion.a>
               <Link to="/contact">
-                <i className="fas fa-envelope"></i>
+                <motion.i
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.3 }}
+                  exit={{ opacity: 0 }}
+                  className="fas fa-envelope"
+                ></motion.i>
               </Link>
-              <a
+              <motion.a
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.4 }}
+                exit={{ opacity: 0 }}
                 href="https://www.linkedin.com/in/tomasz-kasprowicz-2b0709187/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <i className="fab fa-linkedin"></i>
-              </a>
-              <a href={Cv} target="_blank" rel="noopener noreferrer">
+              </motion.a>
+              <motion.a
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+                exit={{ opacity: 0 }}
+                href={Cv}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i className="fas fa-file-alt"></i>
-              </a>
+              </motion.a>
             </div>
           </div>
         </ContainerCenter>

@@ -32,7 +32,7 @@ const GridContainer = styled.div`
   align-content: center;
 `;
 
-const GridItem = styled.div`
+const GridItem = styled(motion.div)`
   height: 45rem;
   width: 100%;
   transition: all 0.4s ease;
@@ -110,6 +110,7 @@ const GridItem = styled.div`
   }
 `;
 
+
 const Contact = () => {
 
 const [btnValue, setBtnvalue] = useState('Send');
@@ -138,7 +139,11 @@ const sendEmail = (e) => {
           <i className="fas fa-dollar-sign"></i>&#123;Contact&#125;
         </SectionTitle>
         <GridContainer>
-          <GridItem>
+          <GridItem
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+          exit={{ opacity: 0 }}>
             <h1>Contact me on:</h1>
             <a
               href="https://github.com/tomekxoxo"
@@ -160,27 +165,48 @@ const sendEmail = (e) => {
           </GridItem>
           <GridItem>
             <form onSubmit={sendEmail}>
-              <h1>Let's Talk!</h1>
-              <input
+              <motion.h1
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.1 }}
+                exit={{ opacity: 0 }}
+              >Let's Talk!</motion.h1>
+              <motion.input
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3 }}
+                exit={{ opacity: 0 }}
                 type="text"
                 name="name"
                 placeholder="Your name"
                 required="required"
               />
-              <input
+              <motion.input
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+                exit={{ opacity: 0 }}
                 type="email"
                 name="email"
                 placeholder="Your email"
                 required="required"
               />
-              <textarea
+              <motion.textarea
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.7 }}
+                exit={{ opacity: 0 }}
                 rows="5"
                 name="message"
                 placeholder="message"
                 required="required"
-              ></textarea>
+              ></motion.textarea>
               {/* <input type="submit" value={btnValue} />    */}
               <motion.input
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.9 }}
+                exit={{ opacity: 0 }}
                 type="submit" value={btnValue}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
