@@ -105,7 +105,7 @@ const AboutMe = () => {
         transition={{ delay: 0.6 }}
         exit={{ opacity: 0 }}
       >
-        Redux
+        React-router
       </SkillItem>
       <SkillItem
         initial={{ opacity: 0 }}
@@ -113,7 +113,7 @@ const AboutMe = () => {
         transition={{ delay: 0.7 }}
         exit={{ opacity: 0 }}
       >
-        RWD
+        Redux
       </SkillItem>
       <SkillItem
         initial={{ opacity: 0 }}
@@ -121,12 +121,28 @@ const AboutMe = () => {
         transition={{ delay: 0.8 }}
         exit={{ opacity: 0 }}
       >
-        Git
+        Styled-Components
       </SkillItem>
       <SkillItem
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.9 }}
+        exit={{ opacity: 0 }}
+      >
+        RWD
+      </SkillItem>
+      <SkillItem
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.0 }}
+        exit={{ opacity: 0 }}
+      >
+        Git
+      </SkillItem>
+      <SkillItem
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.1 }}
         exit={{ opacity: 0 }}
       >
         Npm
