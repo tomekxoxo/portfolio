@@ -42,6 +42,10 @@ const HeaderWrapper = styled.div`
 const Logo = styled.div`
   color: var(--main-color);
   font-size: 2.5rem;
+  .slash{
+    font-size:2rem;
+    font-weight:bold;
+  }
   span {
     display: inline-block;
     color: var(--second-color);
@@ -115,7 +119,7 @@ const Header = () => {
             <i className="fas fa-less-than"></i>
           </span>
           <Link to={process.env.PUBLIC_URL + '/'}>Kasprowicz</Link>
-          <span>
+          <span><span className='slash'>/</span>
             <i className="fas fa-greater-than"></i>
           </span>
           </Logo>  

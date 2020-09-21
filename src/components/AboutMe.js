@@ -45,7 +45,9 @@ const SkillItem = styled(motion.p)`
   margin-right: 1rem;
 `;
 
+
 const AboutMe = () => {
+
   return (
     <Container
       style={pageStyle}

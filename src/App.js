@@ -4,8 +4,11 @@ import { Route, Switch } from "react-router-dom";
 import Particles from "react-particles-js";
 import Header from './components/Header/Header';
 import Hero from './components/Hero'
-import { AnimatePresence} from 'framer-motion';
-
+import { AnimatePresence } from 'framer-motion';
+// import Project from './components/Projects/Project';
+// import Projects from './components/Projects/Projects';
+// import About from './components/AboutMe';
+// import Contact from './components/Contact';
 
 const AsyncProject = React.lazy(() => import('./components/Projects/Project'));
 const AsyncAbout = React.lazy(() => import('./components/AboutMe'));

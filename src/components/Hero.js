@@ -90,15 +90,15 @@ const ContainerCenter = styled(Container)`
     }
     a:nth-of-type(2):hover::before {
       content: "MAIL";
-      left: -1rem;
+      left: -1.5rem;
     }
     a:nth-of-type(3):hover::before {
       content: "LINKEDIN";
-      left: -1rem;
+      left: -3rem;
     }
     a:nth-of-type(4):hover::before {
       content: "CV";
-      left: -1rem;
+      left: -2rem;
     }
     i {
       color: var(--main-color);
@@ -121,7 +121,10 @@ const variants = {
   visible: { opacity: 1, x: "0%" },
 };
 
+
+
 const Hero = () => {
+
   return (
     <Body>
       <HeroBody>
@@ -147,7 +150,7 @@ const Hero = () => {
                     .typeString("Hello!")
                     .pauseFor(1500)
                     .deleteAll()
-                    .typeString("I am Front-End <br> Developer")
+                    .typeString("I am a Front-End <br> Developer")
                     .start();
                 }}
               />
