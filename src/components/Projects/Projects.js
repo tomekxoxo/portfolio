@@ -5,6 +5,7 @@ import Clock from "../../assets/images/clock.jpg";
 import Memo from "../../assets/images/memoCovered.jpg";
 import WeatherIcon from "../../assets/images/weatherIcon.jpg";
 import OsteriaFront from "../../assets/images/osteriaFront.jpg";
+import MovieSearch from "../../assets/images/movie-search.png";
 import { motion } from "framer-motion";
 
 const Container = styled.div`
@@ -66,7 +67,6 @@ const GridItem = styled(motion.div)`
   }
 `;
 
-
 const Projects = (props) => {
   return (
     <Container>
@@ -74,12 +74,21 @@ const Projects = (props) => {
         <i className="fas fa-dollar-sign"></i>&#123;Projects&#125;
       </SectionTitle>
       <GridContainer>
-        <GridItem img={Clock} initial={{ scale: 0 }} animate={{ scale: 1 }}>
+        <GridItem
+          img={MovieSearch}
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+        >
           <Link to={`${props.match.url}/1`}>
             <div></div>
           </Link>
         </GridItem>
-        <GridItem img={Memo} initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{delay:0.1}}>
+        <GridItem
+          img={Memo}
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ delay: 0.1 }}
+        >
           <Link to={`${props.match.url}/2`}>
             <div></div>
           </Link>
@@ -88,7 +97,7 @@ const Projects = (props) => {
           img={WeatherIcon}
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
-          transition={{delay:0.2}}
+          transition={{ delay: 0.2 }}
         >
           <Link to={`${props.match.url}/3`}>
             <div></div>
@@ -98,9 +107,19 @@ const Projects = (props) => {
           img={OsteriaFront}
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
-          transition={{delay:0.3}}
+          transition={{ delay: 0.3 }}
         >
           <Link to={`${props.match.url}/4`}>
+            <div></div>
+          </Link>
+        </GridItem>
+        <GridItem
+          img={Clock}
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ delay: 0.4 }}
+        >
+          <Link to={`${props.match.url}/5`}>
             <div></div>
           </Link>
         </GridItem>

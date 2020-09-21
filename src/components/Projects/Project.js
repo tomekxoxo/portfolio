@@ -15,6 +15,7 @@ import weatherThree from '../../assets/images/weatherAppResponsive.jpg';
 import OsteriaOne from "../../assets/images/osteriaFront.jpg";
 import OsteriaTwo from "../../assets/images/osteriaRecipes.jpg";
 import OsteriaThree from "../../assets/images/osteriaResponsive.jpg";
+import MovieSearchDemo from '../../assets/images/movie-search-demo.jpg';
 import './swiper.css';
 
 const Container = styled(motion.div)`
@@ -120,20 +121,22 @@ SwiperCore.use([Navigation, Pagination]);
 const Project = props => {
   let { id } = useParams();
   const images = [
-    [<img src={Clock} alt="project-img"></img>],
+    [<img src={MovieSearchDemo} alt="project-img"></img>],
     [<img src={MemoOne} alt="project-img"></img>, <img src={MemoTwo} alt="project-img"></img>, <img src={MemoThree} alt="project-img"></img>],
     [<img src={weatherOne} alt="project-img"></img>, <img src={weatherTwo} alt="project-img"></img>, <img src={weatherThree} alt="project-img"></img>],
-    [<img src={OsteriaOne} alt="project-img"></img>, <img src={OsteriaTwo} alt="project-img"></img>, <img src={OsteriaThree} alt="project-img"></img>]
+    [<img src={OsteriaOne} alt="project-img"></img>, <img src={OsteriaTwo} alt="project-img"></img>, <img src={OsteriaThree} alt="project-img"></img>],
+    [<img src={Clock} alt="project-img"></img>]
   ];
 
 
   const [projectData] = useState([
     {
-      projectName: "Clock App",
-      tech: ["HTML5", "SCSS", "JavaScript"],
-      description: "Awesome Clock application which shows time and date.",
-      live: "https://tomekxoxo.github.io/clockJs/",
-      github: "https://github.com/tomekxoxo/clockJs",
+      projectName: "Movie Search App",
+      tech: ["React.js", "StyledComponents", "React-Router", "TMDB-api"],
+      description:
+        "Movie service created based on functionalities that offer popular services e.g. IMDB, FilMWEB. Application offers usefull filters for searching movies and series also by title. Application is still in development mode!",
+      live: "https://tomekxoxo.github.io/movie-search-app/",
+      github: "https://github.com/tomekxoxo/movie-search-app",
     },
     {
       projectName: "Memo Game",
@@ -158,6 +161,13 @@ const Project = props => {
         "Simple Restaurant page.",
       live: "https://tomekxoxo.github.io/osteria/",
       github: "https://github.com/tomekxoxo/osteria",
+    },
+    {
+      projectName: "Clock App",
+      tech: ["HTML5", "SCSS", "JavaScript"],
+      description: "Awesome Clock application which shows time and date.",
+      live: "https://tomekxoxo.github.io/clockJs/",
+      github: "https://github.com/tomekxoxo/clockJs",
     },
   ]);
 
