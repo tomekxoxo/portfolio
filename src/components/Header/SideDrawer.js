@@ -58,7 +58,7 @@ const SideDrawer = (props) => {
           <ul>
             <motion.li
               animate={props.isOpen ? "open" : "closed"}
-              transition={{ delay: 0.3, type: "spring", stiffness: 100 }}
+              transition={{ delay: 0.1, type: "spring", stiffness: 50 }}
               variants={variants}
             >
               <NavLink to={process.env.PUBLIC_URL + '/about'} onClick={props.close}>
@@ -67,7 +67,7 @@ const SideDrawer = (props) => {
             </motion.li>
             <motion.li
               animate={props.isOpen ? "open" : "closed"}
-              transition={{ delay: 0.4, type: "spring", stiffness: 100 }}
+              transition={{ delay: 0.2, type: "spring", stiffness: 50 }}
               variants={variants}
             >
               <NavLink to={process.env.PUBLIC_URL + '/projects'} onClick={props.close}>
@@ -76,7 +76,7 @@ const SideDrawer = (props) => {
             </motion.li>
             <motion.li
               animate={props.isOpen ? "open" : "closed"}
-              transition={{ delay: 0.5, type: "spring", stiffness: 100 }}
+              transition={{ delay: 0.3, type: "spring", stiffness: 50 }}
               variants={variants}
             >
               <NavLink to={process.env.PUBLIC_URL + '/contact'} onClick={props.close}>

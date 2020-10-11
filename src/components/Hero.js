@@ -134,7 +134,7 @@ const Hero = () => {
               initial="hidden"
               variants={variants}
               animate="visible"
-              transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+              transition={{ delay: 0.2, type: "spring", stiffness: 100 }}
             >
               Tomasz <br />
               Kasprowicz
