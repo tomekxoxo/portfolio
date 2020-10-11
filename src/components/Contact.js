@@ -52,6 +52,7 @@ const GridItem = styled(motion.div)`
     display: inline-block;
     text-decoration: none;
     margin-bottom: 1rem;
+    width:26rem;
     font-size: 2rem;
     font-family: var(--second-font);
     color: var(--main-color);
@@ -196,16 +197,15 @@ const sendEmail = (e) => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.7 }}
                 exit={{ opacity: 0 }}
-                rows="5"
+                rows="8"
                 name="message"
                 placeholder="message"
                 required="required"
               ></motion.textarea>
-              {/* <input type="submit" value={btnValue} />    */}
               <motion.input
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.9 }}
+                transition={{ delay: 0 }}
                 exit={{ opacity: 0 }}
                 type="submit" value={btnValue}
                 whileHover={{ scale: 1.1 }}
