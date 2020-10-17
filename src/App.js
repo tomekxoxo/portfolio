@@ -1,6 +1,6 @@
 import React, {Suspense} from "react";
 import { createGlobalStyle } from "styled-components";
-import { Route, Switch } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
 import Particles from "react-particles-js";
 import Header from './components/Header/Header';
 import Hero from './components/Hero'
@@ -165,14 +165,15 @@ function App() {
         }}
       />
       <Header />
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div></div>}>
         <AnimatePresence>
           <Switch>
             <Route path={process.env.PUBLIC_URL + '/'} exact component={Hero}/>
             <Route path={process.env.PUBLIC_URL + '/about'}  component={AsyncAbout}/>
             <Route path={process.env.PUBLIC_URL + '/projects'} exact component={AsyncProjects}/>
             <Route path={process.env.PUBLIC_URL + '/projects/:id'} children={<AsyncProject/>}/>
-            <Route path={process.env.PUBLIC_URL + '/contact'} component={AsyncContact}/>
+            <Route path={process.env.PUBLIC_URL + '/contact'} component={AsyncContact} />
+            <Redirect to={process.env.PUBLIC_URL + '/'}/>
           </Switch>
           </AnimatePresence>
         </Suspense>
