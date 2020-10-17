@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 
 const Container = styled(motion.div)`
   width: 100%;
-  /* min-height: 80vh; */
   max-width: 140rem;
   margin: 0 auto;
   padding: 0 1rem;
@@ -50,12 +49,10 @@ const AboutMe = () => {
 
   return (
     <Container
-      style={pageStyle}
-      initial="initial"
-      animate="in"
-      exit="out"
-      variants={pageVariants}
-      transition={pageTransition}
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ delay: 0.1 }}
+    exit={{ opacity: 0 }}
     >
       <SectionTitle>
         <i className="fas fa-dollar-sign"></i>&#123;About Me&#125;
@@ -113,7 +110,8 @@ const AboutMe = () => {
         transition={{ delay: 0.7 }}
         exit={{ opacity: 0 }}
       >
-        React-router
+        JSX
+        
       </SkillItem>
       <SkillItem
         initial={{ opacity: 0 }}
@@ -121,7 +119,8 @@ const AboutMe = () => {
         transition={{ delay: 0.8 }}
         exit={{ opacity: 0 }}
       >
-        Redux
+        React Hooks
+        
       </SkillItem>
       <SkillItem
         initial={{ opacity: 0 }}
@@ -129,15 +128,17 @@ const AboutMe = () => {
         transition={{ delay: 0.9 }}
         exit={{ opacity: 0 }}
       >
-        Styled-Components
+        React-router
+        
       </SkillItem>
       <SkillItem
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
+        transition={{ delay: 1}}
         exit={{ opacity: 0 }}
       >
-        RWD
+        Redux
+        
       </SkillItem>
       <SkillItem
         initial={{ opacity: 0 }}
@@ -145,7 +146,8 @@ const AboutMe = () => {
         transition={{ delay: 1.1 }}
         exit={{ opacity: 0 }}
       >
-        Git
+        Styled-Components
+        
       </SkillItem>
       <SkillItem
         initial={{ opacity: 0 }}
@@ -153,38 +155,55 @@ const AboutMe = () => {
         transition={{ delay: 1.2 }}
         exit={{ opacity: 0 }}
       >
+        RWD
+        
+      </SkillItem>
+      <SkillItem
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.3 }}
+        exit={{ opacity: 0 }}
+      >
+        Git
+        
+      </SkillItem>
+      <SkillItem
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.4 }}
+        exit={{ opacity: 0 }}
+      >
         Npm
+        
+      </SkillItem>
+      <SkillItem
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5 }}
+        exit={{ opacity: 0 }}
+      >
+        SQL
+        
+      </SkillItem>
+      <SkillItem
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.6 }}
+        exit={{ opacity: 0 }}
+      >
+        Firebase
+      </SkillItem>
+      <SkillItem
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.7 }}
+        exit={{ opacity: 0 }}
+      >
+        REST Api
       </SkillItem>
     </Container>
   );
 };
 
-const pageVariants = {
-  initial: {
-    opacity: 0,
-    x: "-100vw",
-    scale: 0.8,
-  },
-  in: {
-    opacity: 1,
-    x: 0,
-    scale: 1,
-  },
-  out: {
-    opacity: 0,
-    x: "-100vw",
-    scale: 1.2,
-  },
-};
-
-const pageTransition = {
-  type: "tween",
-  ease: "anticipate",
-  duration: 0.5,
-};
-
-const pageStyle = {
-  position: "relative",
-};
 
 export default AboutMe;

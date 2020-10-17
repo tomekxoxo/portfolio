@@ -40,8 +40,8 @@ const GridItem = styled(motion.div)`
   &:first-of-type {
     height: 15rem;
     margin-bottom: 2rem;
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
   }
 
   h1 {
@@ -52,19 +52,19 @@ const GridItem = styled(motion.div)`
     display: inline-block;
     text-decoration: none;
     margin-bottom: 1rem;
-    width:26rem;
+    width: 26rem;
     font-size: 2rem;
     font-family: var(--second-font);
     color: var(--main-color);
-    &:hover{
-       i{color: var(--main-color);} 
+    &:hover {
+      i {
+        color: var(--main-color);
       }
+    }
     i {
       margin-right: 1rem;
       color: var(--second-color);
-      
     }
-
   }
   form {
     max-width: 55rem;
@@ -94,10 +94,9 @@ const GridItem = styled(motion.div)`
       background-color: var(--second-color);
       color: var(--main-bg);
       cursor: pointer;
-      &:hover{
+      &:hover {
         color: var(--main-color);
       }
-      
     }
     textarea {
       resize: none;
@@ -111,111 +110,121 @@ const GridItem = styled(motion.div)`
   }
 `;
 
-
 const Contact = () => {
+  const [btnValue, setBtnvalue] = useState("Send");
 
-const [btnValue, setBtnvalue] = useState('Send');
-
-const sendEmail = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    emailjs.sendForm('service_8rs8zwj', 'template_lq27rbh', e.target, 'user_fj9oKUrwZ6SHGCaFZ7yXQ')
-      .then((result) => {
-        setBtnvalue('Message Sent !');
-        setTimeout(() => {
-          setBtnvalue('Send')
-        }, 3000)
-      }, (error) => {
-          setBtnvalue(error.text)
+    emailjs
+      .sendForm(
+        "service_8rs8zwj",
+        "template_lq27rbh",
+        e.target,
+        "user_fj9oKUrwZ6SHGCaFZ7yXQ"
+      )
+      .then(
+        (result) => {
+          setBtnvalue("Message Sent !");
           setTimeout(() => {
-            setBtnvalue('Send')
-          }, 3000)
-      });
-    e.target.reset()
+            setBtnvalue("Send");
+          }, 3000);
+        },
+        (error) => {
+          setBtnvalue(error.text);
+          setTimeout(() => {
+            setBtnvalue("Send");
+          }, 3000);
+        }
+      );
+    e.target.reset();
   };
 
-
-    return (
-      <Container>
-        <SectionTitle>
-          <i className="fas fa-dollar-sign"></i>&#123;Contact&#125;
-        </SectionTitle>
-        <GridContainer>
-          <GridItem
+  return (
+    <Container>
+      <SectionTitle>
+        <i className="fas fa-dollar-sign"></i>&#123;Contact&#125;
+      </SectionTitle>
+      <GridContainer>
+        <GridItem
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
-          exit={{ opacity: 0 }}>
-            <h1>Contact me on:</h1>
-            <a
-              href="https://github.com/tomekxoxo"
-              target="_blank"
-              rel="noopener noreferrer"
+          exit={{ opacity: 0 }}
+        >
+          <h1>Contact me on:</h1>
+          <a
+            href="https://github.com/tomekxoxo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fab fa-github"></i>github.com/tomekxoxo
+          </a>
+          <a
+            href="https://www.linkedin.com/in/tomasz-kasprowicz-2b0709187/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fab fa-linkedin"></i>in/tomasz-kasprowicz
+          </a>
+          <a href="mailto:tomaszkasprowicz24@gmail.com">
+            <i className="fas fa-envelope"></i>message
+          </a>
+        </GridItem>
+        <GridItem>
+          <form onSubmit={sendEmail}>
+            <motion.h1
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.1 }}
+              exit={{ opacity: 0 }}
             >
-              <i className="fab fa-github"></i>github.com/tomekxoxo
-            </a>
-            <a
-              href="https://www.linkedin.com/in/tomasz-kasprowicz-2b0709187/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-linkedin"></i>in/tomasz-kasprowicz
-            </a>
-            <a href="mailto:tomaszkasprowicz24@gmail.com">
-              <i className="fas fa-envelope"></i>message
-            </a>
-          </GridItem>
-          <GridItem>
-            <form onSubmit={sendEmail}>
-              <motion.h1
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.1 }}
-                exit={{ opacity: 0 }}
-              >Let's Talk!</motion.h1>
-              <motion.input
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.3 }}
-                exit={{ opacity: 0 }}
-                type="text"
-                name="name"
-                placeholder="Your name"
-                required="required"
-              />
-              <motion.input
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
-                exit={{ opacity: 0 }}
-                type="email"
-                name="email"
-                placeholder="Your email"
-                required="required"
-              />
-              <motion.textarea
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.7 }}
-                exit={{ opacity: 0 }}
-                rows="8"
-                name="message"
-                placeholder="message"
-                required="required"
-              ></motion.textarea>
-              <motion.input
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0 }}
-                exit={{ opacity: 0 }}
-                type="submit" value={btnValue}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              />
-            </form>
-          </GridItem>
-        </GridContainer>
-      </Container>
-    );
-}
+              Let's Talk!
+            </motion.h1>
+            <motion.input
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              exit={{ opacity: 0 }}
+              type="text"
+              name="name"
+              placeholder="Your name"
+              required="required"
+            />
+            <motion.input
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+              exit={{ opacity: 0 }}
+              type="email"
+              name="email"
+              placeholder="Your email"
+              required="required"
+            />
+            <motion.textarea
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4 }}
+              exit={{ opacity: 0 }}
+              rows="8"
+              name="message"
+              placeholder="message"
+              required="required"
+            ></motion.textarea>
+            <motion.input
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+              exit={{ opacity: 0 }}
+              type="submit"
+              value={btnValue}
+              whileHover={{ scale: 1.1, transition: { duration: 0 } }}
+              whileTap={{ scale: 0.9, transition: { duration: 0 } }}
+            />
+          </form>
+        </GridItem>
+      </GridContainer>
+    </Container>
+  );
+};
 
 export default Contact;

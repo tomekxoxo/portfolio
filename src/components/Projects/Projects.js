@@ -76,8 +76,8 @@ const Projects = (props) => {
       <GridContainer>
         <GridItem
           img={MovieSearch}
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
         >
           <Link to={`${props.match.url}/1`}>
             <div></div>
@@ -85,8 +85,8 @@ const Projects = (props) => {
         </GridItem>
         <GridItem
           img={Memo}
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ delay: 0.1 }}
         >
           <Link to={`${props.match.url}/2`}>
@@ -95,8 +95,8 @@ const Projects = (props) => {
         </GridItem>
         <GridItem
           img={WeatherIcon}
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
         >
           <Link to={`${props.match.url}/3`}>
@@ -105,8 +105,8 @@ const Projects = (props) => {
         </GridItem>
         <GridItem
           img={OsteriaFront}
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
         >
           <Link to={`${props.match.url}/4`}>
@@ -115,8 +115,8 @@ const Projects = (props) => {
         </GridItem>
         <GridItem
           img={Clock}
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
         >
           <Link to={`${props.match.url}/5`}>

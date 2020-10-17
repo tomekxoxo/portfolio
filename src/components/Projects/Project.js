@@ -132,9 +132,9 @@ const Project = props => {
   const [projectData] = useState([
     {
       projectName: "Movie Search App",
-      tech: ["React.js", "StyledComponents", "React-Router", "TMDB-api"],
+      tech: ["React.js","Redux","React-Router","StyledComponents","Firebase", "TMDB-api"],
       description:
-        "Movie service created based on functionalities that offer popular services e.g. IMDB, FilMWEB. Application offers usefull filters for searching movies and series also by title. Application is still in development mode!",
+        "Movie search application. You can search for movies /series ever created and create your own account and rate movies /series you saw or would like to see.",
       live: "https://tomekxoxo.github.io/movie-search-app/",
       github: "https://github.com/tomekxoxo/movie-search-app",
     },
