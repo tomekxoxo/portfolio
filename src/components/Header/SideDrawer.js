@@ -45,8 +45,8 @@ const StyledDrawer = styled.div`
 `;
 
 const variants = {
-  open: { opacity: 1, x: 0 },
-  closed: { opacity: 0, x: "100%" },
+  open: { opacity: 1, x: 0, rotation: 0.02 },
+  closed: { opacity: 0, x: "100%", rotation: 0.02 },
 };
 
 const SideDrawer = (props) => {

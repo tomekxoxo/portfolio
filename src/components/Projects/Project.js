@@ -1,22 +1,25 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 import { motion } from "framer-motion";
-import SwiperCore, { Navigation, Pagination} from 'swiper';
-import Clock from '../../assets/images/clock.jpg';
-import MemoOne from '../../assets/images/memoCovered.jpg';
-import MemoTwo from '../../assets/images/memoTouched.jpg';
-import MemoThree from '../../assets/images/memoWin.jpg';
-import weatherOne from '../../assets/images/weatherAppFront.jpg';
-import weatherTwo from '../../assets/images/weatherAppModal.jpg';
-import weatherThree from '../../assets/images/weatherAppResponsive.jpg';
+import SwiperCore, { Navigation, Pagination } from "swiper";
+import Clock from "../../assets/images/clock.jpg";
+import MemoOne from "../../assets/images/memoCovered.jpg";
+import MemoTwo from "../../assets/images/memoTouched.jpg";
+import MemoThree from "../../assets/images/memoWin.jpg";
+import weatherOne from "../../assets/images/weatherAppFront.jpg";
+import weatherTwo from "../../assets/images/weatherAppModal.jpg";
+import weatherThree from "../../assets/images/weatherAppResponsive.jpg";
 import OsteriaOne from "../../assets/images/osteriaFront.jpg";
 import OsteriaTwo from "../../assets/images/osteriaRecipes.jpg";
 import OsteriaThree from "../../assets/images/osteriaResponsive.jpg";
-import MovieSearchDemo from '../../assets/images/movie-search-demo.jpg';
-import './swiper.css';
+import MovieSearchDemo from "../../assets/images/movie-search-demo.jpg";
+import MovieSearchForm from "../../assets/images/movie-search-form.jpg";
+import MovieSearchCard from "../../assets/images/movie-search-card.jpg";
+import MovieSearch from "../../assets/images/movie-search-search.jpg";
+import "./swiper.css";
 
 const Container = styled(motion.div)`
   width: 100%;
@@ -24,24 +27,24 @@ const Container = styled(motion.div)`
   margin: 0 auto;
   padding: 0 1rem;
   margin-bottom: 3rem;
-  div{
-    padding-top:1rem;
-    max-width:400px;
-    max-height:400px;
-    margin:initial;
-    display:flex;
-    align-items:center;
-    .swiper-pagination-bullet{
-      background-color:white;
+  div {
+    padding-top: 1rem;
+    max-width: 400px;
+    max-height: 400px;
+    margin: initial;
+    display: flex;
+    align-items: center;
+    .swiper-pagination-bullet {
+      background-color: white;
     }
     .swiper-button-next,
-    .swiper-button-prev{
-      color:var(--second-color);
+    .swiper-button-prev {
+      color: var(--second-color);
     }
-    img{
-      max-width:100%; 
-      height:auto;
-  }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
   }
   @media screen and (max-width: 768px) {
     & {
@@ -63,7 +66,7 @@ const Container = styled(motion.div)`
 
 const SectionTitle = styled.h1`
   padding-top: 20vh;
-  padding-bottom:1rem;
+  padding-bottom: 1rem;
   color: var(--main-color);
   font-size: 4rem;
   i {
@@ -115,26 +118,48 @@ const StyledButton = styled.button`
   }
 `;
 
-
 SwiperCore.use([Navigation, Pagination]);
 
-const Project = props => {
+const Project = (props) => {
   let { id } = useParams();
   const images = [
-    [<img src={MovieSearchDemo} alt="project-img"></img>],
-    [<img src={MemoOne} alt="project-img"></img>, <img src={MemoTwo} alt="project-img"></img>, <img src={MemoThree} alt="project-img"></img>],
-    [<img src={weatherOne} alt="project-img"></img>, <img src={weatherTwo} alt="project-img"></img>, <img src={weatherThree} alt="project-img"></img>],
-    [<img src={OsteriaOne} alt="project-img"></img>, <img src={OsteriaTwo} alt="project-img"></img>, <img src={OsteriaThree} alt="project-img"></img>],
-    [<img src={Clock} alt="project-img"></img>]
+    [
+      <img src={MovieSearchDemo} alt="project-img"></img>,
+      <img src={MovieSearchForm} alt="project-img"></img>,
+      <img src={MovieSearchCard} alt="project-img"></img>,
+      <img src={MovieSearch} alt="project-img"></img>,
+    ],
+    [
+      <img src={MemoOne} alt="project-img"></img>,
+      <img src={MemoTwo} alt="project-img"></img>,
+      <img src={MemoThree} alt="project-img"></img>,
+    ],
+    [
+      <img src={weatherOne} alt="project-img"></img>,
+      <img src={weatherTwo} alt="project-img"></img>,
+      <img src={weatherThree} alt="project-img"></img>,
+    ],
+    [
+      <img src={OsteriaOne} alt="project-img"></img>,
+      <img src={OsteriaTwo} alt="project-img"></img>,
+      <img src={OsteriaThree} alt="project-img"></img>,
+    ],
+    [<img src={Clock} alt="project-img"></img>],
   ];
-
 
   const [projectData] = useState([
     {
-      projectName: "Movie Search App",
-      tech: ["React.js","Redux","React-Router","StyledComponents","Firebase", "TMDB-api"],
+      projectName: "Movie Service",
+      tech: [
+        "React.js",
+        "Redux",
+        "React-Router",
+        "StyledComponents",
+        "Firebase",
+        "TMDB-api",
+      ],
       description:
-        "Movie search application. You can search for movies /series ever created and create your own account and rate movies /series you saw or would like to see.",
+        "Movie search application. You can search for movies and series, filter data with the most popular criteria. Create your own account and add interesting movies to your watch list or simply rate them!",
       live: "https://tomekxoxo.github.io/movie-search-app/",
       github: "https://github.com/tomekxoxo/movie-search-app",
     },
@@ -157,15 +182,14 @@ const Project = props => {
     {
       projectName: "Restaurant App",
       tech: ["HTML5", "SCSS", "JavaScript"],
-      description:
-        "Simple Restaurant page.",
+      description: "Simple Restaurant page.",
       live: "https://tomekxoxo.github.io/osteria/",
       github: "https://github.com/tomekxoxo/osteria",
     },
     {
       projectName: "Clock App",
       tech: ["HTML5", "SCSS", "JavaScript"],
-      description: "Awesome Clock application which shows time and date.",
+      description: "Awesome Luxury Clock application, for people who value time!",
       live: "https://tomekxoxo.github.io/clockJs/",
       github: "https://github.com/tomekxoxo/clockJs",
     },
@@ -176,19 +200,20 @@ const Project = props => {
     if (index + 1 == id) {
       project = element;
     }
-  }); 
+  });
 
   return (
     <Container
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.3 }}
-        exit={{ opacity: 0 }}>
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.3 }}
+      exit={{ opacity: 0 }}
+    >
       <SectionTitle>
         <i className="fas fa-dollar-sign"></i>&#123;{project.projectName}&#125;
       </SectionTitle>
 
-      <Swiper 
+      <Swiper
         spaceBetween={0}
         slidesPerView={1}
         navigation
@@ -197,11 +222,11 @@ const Project = props => {
         {images.map((img, index) => {
           if (index + 1 == id) {
             return img.map((element, ind) => {
-              return <SwiperSlide key={ind}>{element}</SwiperSlide>
-            })
+              return <SwiperSlide key={ind}>{element}</SwiperSlide>;
+            });
           }
         })}
-    </Swiper>
+      </Swiper>
       <p>{project.description}</p>
       <h2>Technologies:</h2>
       {projectData.map((element, index) => {
@@ -239,14 +264,12 @@ const Project = props => {
         }
       })}
       <StyledButton>
-        <Link to={process.env.PUBLIC_URL + '/projects'}className="goBack">
+        <Link to={process.env.PUBLIC_URL + "/projects"} className="goBack">
           <i className="fas fa-chevron-circle-left"></i>Back To Projects
         </Link>
       </StyledButton>
-
     </Container>
   );
 };
-
 
 export default Project;
