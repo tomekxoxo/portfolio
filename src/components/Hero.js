@@ -139,10 +139,6 @@ const Hero = () => {
               Tomasz <br />
               Kasprowicz
             </motion.h1>
-            {/* <h1>
-              Tomasz <br />
-              Kasprowicz
-            </h1> */}
             <h1 className="special">
               <Typewriter
                 onInit={(typewriter) => {
