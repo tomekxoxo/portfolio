@@ -21,9 +21,22 @@ App was created for learning purpose.
 * emailJs
 
 ## Setup
-Download Files then :
-```sh
-npm install
+1. clone repo   
+```
+git clone https://github.com/tomekxoxo/portfolio.git
+```
+
+2. cd into directory   
+```
+cd portfolio
+```
+
+3. install dependencies using npm 
+```
+npm i
+```
+3. To start server
+```
 npm start
 ```
 
