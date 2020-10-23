@@ -21,8 +21,11 @@ App was created for learning purpose.
 * emailJs
 
 ## Setup
-Simply download files and open in live server.
-If you want to develope please use `npm install` and use scripts saved in package.json.
+Download Files then :
+```sh
+npm install
+npm start
+```
 
 ## Features
 * Contact with my via contact form.
