@@ -19,6 +19,8 @@ import MovieSearchDemo from "../../assets/images/movie-search-demo.jpg";
 import MovieSearchForm from "../../assets/images/movie-search-form.jpg";
 import MovieSearchCard from "../../assets/images/movie-search-card.jpg";
 import MovieSearch from "../../assets/images/movie-search-search.jpg";
+import Tile from "../../assets/images/tile-cover.png";
+import TileWin from "../../assets/images/tile-win.png";
 import "./swiper.css";
 
 const Container = styled(motion.div)`
@@ -130,6 +132,10 @@ const Project = (props) => {
       <img src={MovieSearch} alt="project-img"></img>,
     ],
     [
+      <img src={Tile} alt="project-img"></img>,
+      <img src={TileWin} alt="project-img"></img>,
+    ],
+    [
       <img src={MemoOne} alt="project-img"></img>,
       <img src={MemoTwo} alt="project-img"></img>,
       <img src={MemoThree} alt="project-img"></img>,
@@ -162,6 +168,18 @@ const Project = (props) => {
         "Movie search application. You can search for movies and series, filter data with the most popular criteria. Create your own account and add interesting movies to your watch list or simply rate them!",
       live: "https://tomekxoxo.github.io/movie-search-app/",
       github: "https://github.com/tomekxoxo/movie-search-app",
+    },
+    {
+      projectName: "Tile Game",
+      tech: [
+        "React.js",
+        "Redux",
+        "StyledComponents",
+      ],
+      description:
+        "Click tile if it has neighbors in the same color. New tiles will generate and move in blank spaces.",
+      live: "https://tomekxoxo.github.io/tile-game/",
+      github: "https://github.com/tomekxoxo/tile-game",
     },
     {
       projectName: "Memo Game",

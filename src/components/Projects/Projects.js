@@ -6,6 +6,7 @@ import Memo from "../../assets/images/memoCovered.jpg";
 import WeatherIcon from "../../assets/images/weatherIcon.jpg";
 import OsteriaFront from "../../assets/images/osteriaFront.jpg";
 import MovieSearch from "../../assets/images/movie-search.png";
+import Tile from "../../assets/images/tile-cover.png";
 import { motion } from "framer-motion";
 
 const Container = styled.div`
@@ -84,7 +85,7 @@ const Projects = (props) => {
           </Link>
         </GridItem>
         <GridItem
-          img={Memo}
+          img={Tile}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.1 }}
@@ -94,7 +95,7 @@ const Projects = (props) => {
           </Link>
         </GridItem>
         <GridItem
-          img={WeatherIcon}
+          img={Memo}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
@@ -104,7 +105,7 @@ const Projects = (props) => {
           </Link>
         </GridItem>
         <GridItem
-          img={OsteriaFront}
+          img={WeatherIcon}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
@@ -114,12 +115,22 @@ const Projects = (props) => {
           </Link>
         </GridItem>
         <GridItem
-          img={Clock}
+          img={OsteriaFront}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
         >
           <Link to={`${props.match.url}/5`}>
+            <div></div>
+          </Link>
+        </GridItem>
+        <GridItem
+          img={Clock}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+        >
+          <Link to={`${props.match.url}/6`}>
             <div></div>
           </Link>
         </GridItem>
